@@ -7,7 +7,7 @@ if [[ -z tmux ]]; then
   exit 0
 fi
 
-selected=$(find ~/.config ~/Documents/Personal ~/Documents/Work -maxdepth 1 -mindepth 1 -type d | fzf)
+selected=$(find ~/.config ~/Documents/Personal ~/Documents/Work ~/.local -maxdepth 1 -mindepth 1 -type d | fzf)
 
 if [[ -z $selected ]]; then
  exit 0 
